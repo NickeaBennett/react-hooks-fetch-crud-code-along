@@ -47,6 +47,18 @@
       "category": "Dairy",
       "isInCart": false,
       "id": 8
+    },
+    {
+      "name": "American Cheese",
+      "category": "Dairy",
+      "isInCart": false,
+      "id": 9
+    },
+    {
+      "name": "Salad",
+      "category": "Dessert",
+      "isInCart": false,
+      "id": 10
     }
   ]
 }
