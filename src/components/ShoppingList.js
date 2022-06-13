@@ -13,9 +13,18 @@ function ShoppingList() {
     .then((items) => setItems(items));
   }, []);
 
+  function handleDeletedItem(deletedItem) {
+    console.log("In ShoppingCart: " + deletedItem)
+  }
+
+  function handleUpdatedItem(updatedItem) {
+    console.log("In ShoppingCart: " + updatedItem);
+  }
+
   function handleAddItem(newItem) {
     setItems([...items, newItem]);
   }
+  
   function handleCategoryChange(category) {
     setSelectedCategory(category);
   }
@@ -35,7 +44,12 @@ function ShoppingList() {
       />
       <ul className="Items">
         {itemsToDisplay.map((item) => (
-          <Item key={item.id} item={item} />
+          <Item 
+            key={item.id} 
+            item={item} 
+            onUpdateItem={handleUpdatedItem}
+            onDeleteItem={handleDeletedItem}
+          />
         ))}
       </ul>
     </div>
